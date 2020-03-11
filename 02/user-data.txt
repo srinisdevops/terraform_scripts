@@ -1,0 +1,11 @@
+#!/bin/bash
+touch /tmp/file0
+sudo apt update -y
+touch /tmp/file1
+sudo apt install apache2 -y
+sudo apt install lynx -y
+sudo ufw allow 'Apache'
+git clone https://github.com/srinisdevops/indexhtml.git
+sudo cp indexhtml/index.html /var/www/html/
+touch /tmp/file2.txt
+cp indexhtml/index.html /tmp/index.html
